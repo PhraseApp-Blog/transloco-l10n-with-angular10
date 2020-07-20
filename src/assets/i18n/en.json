@@ -1,0 +1,35 @@
+{
+  "title": {
+    "label": "Phrase Service Feedback"
+  },
+  "name": {
+    "label": "Name",
+    "placeholder": "Enter Name",
+    "error": " Name is required"
+  },
+  "gender": {
+    "label": "Gender",
+    "error": " Gender is required",
+    "options": {
+      "male": "Male",
+      "female": "Female"
+    }
+  },
+  "comment": {
+    "label": "Comment",
+    "placeholder": "Enter Comment",
+    "error": " Comment is required"
+  },
+  "rating": {
+    "label": "Rate our customer service: ",
+    "error": "Rating is required",
+    "options": {
+      "excellent": "Excellent",
+      "good": "Good",
+      "bad": "Bad"
+    }
+  },
+  "submit": {
+    "label": "Submit"
+  }
+}

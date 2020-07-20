@@ -1,0 +1,19 @@
+{
+  "comment.error": "Se requiere un comentario",
+  "comment.label": "Comentario",
+  "comment.placeholder": "Introducir comentario",
+  "gender.error": "Se requiere género",
+  "gender.label": "Género",
+  "gender.options.female": "Mujer",
+  "gender.options.male": "Hombre",
+  "name.error": "Se requiere nombre",
+  "name.label": "Nombre",
+  "name.placeholder": "Ingrese el nombre",
+  "rating.error": "Se requiere calificación",
+  "rating.label": "Califique nuestro servicio de atención al cliente:",
+  "rating.options.bad": "Malo",
+  "rating.options.excellent": "Excelente",
+  "rating.options.good": "Buena",
+  "submit.label": "Enviar",
+  "title.label": "Comentarios del servicio de frases"
+}

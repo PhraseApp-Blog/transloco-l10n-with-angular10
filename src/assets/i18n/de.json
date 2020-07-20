@@ -1,0 +1,19 @@
+{
+  "comment.error": "Kommentar ist erforderlich",
+  "comment.label": "Kommentar",
+  "comment.placeholder": "Kommentar eingeben",
+  "gender.error": "Geschlecht ist erforderlich",
+  "gender.label": "genus",
+  "gender.options.female": "Weiblich",
+  "gender.options.male": "Männlich",
+  "name.error": "Name ist erforderlich",
+  "name.label": "Namen",
+  "name.placeholder": "Name eingeben",
+  "rating.error": "Bewertung ist erforderlich",
+  "rating.label": "Bewerten Sie unseren Kundenservice:",
+  "rating.options.bad": "Schlecht",
+  "rating.options.excellent": "Ausgezeichnet",
+  "rating.options.good": "Gute",
+  "submit.label": "Senden",
+  "title.label": "Phrase Service Feedback"
+}

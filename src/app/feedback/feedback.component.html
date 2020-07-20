@@ -1,0 +1,79 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h3>{{ 'title.label' | transloco }}</h3>
+                </div>
+                <div class="card-body">
+                    <form #feedbackForm="ngForm" (ngSubmit)="feedbackForm.form.valid && saveFeedback()" novalidate>
+                        <div class="form-group" *transloco="let t; read: 'name'">
+                            <label>{{ t('label') }}</label>
+                            <input type="text" [placeholder]="t('placeholder')" class="form-control"
+                                [(ngModel)]="customerFeedback.name" name="name" #name="ngModel" required>
+                            <span class="text-danger"
+                                *ngIf="(name.touched || feedbackForm.submitted) && name.errors?.required">
+                                {{ t('error') }}
+                            </span>
+                        </div>
+                        <div class="form-group" *transloco="let t; read: 'gender'">
+                            <label>{{ t('label') }}</label>
+                            <select class="form-control" data-val="true" [(ngModel)]="customerFeedback.gender"
+                                name="gender" #gender="ngModel" required>
+                                <option value="">Select Category</option>
+                                <option value="{{ t('options.male') }}">{{ t('options.male') }}</option>
+                                <option value="{{ t('options.female') }}">{{ t('options.female') }}</option>
+                            </select>
+                            <span class="text-danger"
+                                *ngIf="(gender.touched || feedbackForm.submitted)&& gender.errors?.required">
+                                {{ t('error') }}
+                            </span>
+                        </div>
+                        <div class=" form-group" *transloco="let t; read: 'comment'">
+                            <label>{{ t('label') }}</label>
+                            <textarea type="text" [placeholder]="t('placeholder')" class="form-control"
+                                [(ngModel)]="customerFeedback.comment" name="comment" #comment="ngModel"
+                                required></textarea>
+                            <span class="text-danger"
+                                *ngIf="(comment.touched || feedbackForm.submitted)&& comment.errors?.required">
+                                {{ t('error') }}
+                            </span>
+                        </div>
+                        <div class="form-group" *transloco="let t; read: 'rating'">
+                            <label>{{ t('label') }}</label>
+                            <div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input id="excellent" type="radio" class="custom-control-input"
+                                        [value]="t('options.excellent')" name="rating"
+                                        [(ngModel)]="customerFeedback.rating" #rating="ngModel" required>
+                                    <label class="custom-control-label" for="excellent">{{ t('options.excellent') }}
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input id="good" type="radio" class="custom-control-input"
+                                        [value]="t('options.good')" name="rating" [(ngModel)]="customerFeedback.rating"
+                                        #rating="ngModel" required>
+                                    <label class="custom-control-label" for="good">{{ t('options.good') }}</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input id="bad" type="radio" class="custom-control-input" [value]="t('options.bad')"
+                                        name="rating" [(ngModel)]="customerFeedback.rating" #rating="ngModel" required>
+                                    <label class="custom-control-label" for="bad">{{ t('options.bad') }}</label>
+                                </div>
+                            </div>
+                            <span class="text-danger"
+                                *ngIf="(rating.touched || feedbackForm.submitted)&& rating.errors?.required">
+                                {{ t('error') }}
+                            </span>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col d-flex justify-content-end" *transloco="let t; read: 'submit'">
+                                <button type="submit" class="btn btn-success"> {{ t('label') }}</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
